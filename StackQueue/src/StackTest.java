@@ -12,9 +12,17 @@ public class StackTest {
 //        System.out.println(stack.pop());
 //        System.out.println(stack.peek());
 //        System.out.println("The size is " + stack.size());
+        try{
+            StackCalculator sc = new StackCalculator();
+            int res = sc.calculator("10+20 * 2-3 +6/ 2");
+            System.out.println(res);
+            //System.out.println(sc.calculator("10+foo"));
+            //System.out.println(sc.calculator("10+++20 20"));
+            System.out.println(sc.calculator("10+20 20"));
 
-        StackCalculator sc = new StackCalculator();
-        int res = sc.calculator("10 + 20 * 2 - 3 + 6 / 2");
-        System.out.println(res);
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
     }
 }

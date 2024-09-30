@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Stack {
+public class Stack<Object> {
     private ArrayList<Object> list = null;
     private int size = 0;
     public Stack() {
