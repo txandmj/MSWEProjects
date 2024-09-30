@@ -28,28 +28,24 @@ public class StackCalculator {
         int res = 0, num = 0;
         char operand = '+'; //+-*/
         char[] chars = str.toCharArray();
-        int countOperands = 0;
         boolean flagPreIsNum = false; //avoid multiple operands together
-        //boolean flagPreIsOperand = true;
         for(char c : chars) {
             int ct = charType(c);
             if(ct == 1) {// If it's a digit
+//                if(flagPreIsNum) {
+//                    throw new Exception("There are multiple numbers put together!");
+//                }
                 flagPreIsNum = true;
-                //flagPreIsOperand = false;
-
                 num = num * 10 + c - '0'; // ASCII conversion to int!!!
             } else if (ct == 2){// If it's an operator
                 if(flagPreIsNum) {
-                    countOperands++;
                     InternalCalc(operand, num);
                     operand = c;
                     num = 0;
                     flagPreIsNum = false;
-                    //flagPreIsOperand = true;
                 } else {
-                    throw new Exception("The element before the operand is not a number!");
+                    throw new Exception("There are multiple operands put together!");
                 }
-
             } else if (ct == 0) { // If it's a space, skip it
                 continue;
             } else if (ct == -1) {

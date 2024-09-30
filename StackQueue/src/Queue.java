@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Queue {
+public class Queue<Object> {
     private ArrayList<Object> list;
     int size = 0;
     public Queue(){
@@ -13,7 +13,7 @@ public class Queue {
         }
         list.add(element);
         size++;
-        System.out.println(element + " is added!");
+        //System.out.println(element + " is added!");
     }
 
     public Object dequeue() {
@@ -33,5 +33,8 @@ public class Queue {
     }
     public int size() {
         return size;
+    }
+    public boolean isEmpty() {
+        return size == 0;
     }
 }

@@ -17,8 +17,8 @@ public class StackTest {
             int res = sc.calculator("10+20 * 2-3 +6/ 2");
             System.out.println(res);
             //System.out.println(sc.calculator("10+foo"));
-            //System.out.println(sc.calculator("10+++20 20"));
-            System.out.println(sc.calculator("10+20 20"));
+            System.out.println(sc.calculator("10+++20"));
+            //System.out.println(sc.calculator("10+20 20"));
 
         } catch (Exception e){
             System.out.println(e.getMessage());
