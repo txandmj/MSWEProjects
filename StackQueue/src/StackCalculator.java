@@ -1,5 +1,5 @@
 public class StackCalculator {
-    Stack<Object> stack = null;
+    Stack<Integer> stack = null;
     public StackCalculator() {
         stack = new Stack();
     }
@@ -16,7 +16,7 @@ public class StackCalculator {
             if(num == 0) {
                 throw new ArithmeticException("Division by zero!");
             }
-            int tmp = (int)stack.pop() / num;
+            int tmp = stack.pop() / num;
             stack.push(tmp);
         }
     }
@@ -28,25 +28,28 @@ public class StackCalculator {
         int res = 0, num = 0;
         char operand = '+'; //+-*/
         char[] chars = str.toCharArray();
-        boolean flagPreIsNum = false; //avoid multiple operands together
+        //To avoid multiple numbers and operands together
+        //flagPre[0] for number, flag[1] for space
+        boolean[] flagPre = {true, false};
         for(char c : chars) {
             int ct = charType(c);
             if(ct == 1) {// If it's a digit
-//                if(flagPreIsNum) {
-//                    throw new Exception("There are multiple numbers put together!");
-//                }
-                flagPreIsNum = true;
+                if(flagPre[0] && flagPre[1]) { //there are spaces between numbers
+                    throw new Exception("Invalid input: there are multiple numbers put together!");
+                }
+                flagPre[0] = true;
                 num = num * 10 + c - '0'; // ASCII conversion to int!!!
             } else if (ct == 2){// If it's an operator
-                if(flagPreIsNum) {
+                if(flagPre[0]) { //previous element is a number
                     InternalCalc(operand, num);
                     operand = c;
-                    num = 0;
-                    flagPreIsNum = false;
-                } else {
-                    throw new Exception("There are multiple operands put together!");
+                    num = 0;//reassign num
+                    flagPre[0] = false;
+                } else { //previous element isn't a number,edge case: 10 ++ 20
+                    throw new Exception("Invalid input: expected a number before the operator!");
                 }
             } else if (ct == 0) { // If it's a space, skip it
+                flagPre[1] = true; //update flagPre[1](for space)
                 continue;
             } else if (ct == -1) {
                 throw new Exception("String is invalid!");
@@ -54,7 +57,12 @@ public class StackCalculator {
 
         }
         // Perform the last calculation
-        InternalCalc(operand, num);
+        if(flagPre[0] == true) { //the last element is a number
+            InternalCalc(operand, num);
+        } else { //the last element isn't a number. eg 10+20+
+            throw new Exception("Invalid input: the last element should be a number");
+        }
+
         // Pop the stack and sum up the result
         while(stack.size() > 0) {
             res += (int)stack.pop();
