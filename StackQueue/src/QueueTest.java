@@ -22,6 +22,4 @@ public class QueueTest {
         System.out.println(s2q.peek());
         System.out.println(s2q.size());
     }
-
-
 }
