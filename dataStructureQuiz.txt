@@ -1,0 +1,330 @@
+8. Which data structure is best for a round-robin scheduler? 
+Group of answer choices 1
+
+Circular linked list
+
+Single linked list
+
+Double linked list
+
+Array
+
+2.4 Which data structure can be used to implement a Stack?
+Group of answer choices 124
+
+Doubly Linked List
+
+Single Linked List
+
+Binary Tree
+
+Array
+2.5 What is the runtime of a Stack pop operation?
+Group of answer choices  1
+
+O(1)
+
+O(n^2)
+
+O(n)
+
+O(nlogn)
+
+2.7 Which of the following is an application of Queue?
+Group of answer choices 1234
+
+Breadth-first-search
+
+Traverse a linked list
+
+Sort an array
+
+Parenthesis balance check
+2.10 A networked printer works similar to a - 
+Group of answer choices 1
+
+Queue
+
+Stack
+
+3.1 Which one is correct about a Map data structure?
+Group of answer choices 3
+
+Map can contain same key multiple times
+
+Map can contain same value multiple times
+
+Map is a collection of key-value pair
+
+Map always contains a finite number of keys
+
+3.2 Which of the following can be an application of Hashtable?
+Group of answer choices 4
+
+Implementation of a linked list
+
+Push and pop operation in a stack
+
+Sorting a list of numbers
+
+Counting word frequency in a string
+3.3 What is the purpose of a hash function?
+Group of answer choices 4
+
+To map a value to a key
+
+To find find the number of elements inside the hashtable
+
+To determine the size of the hashtable
+
+To map a key to a value
+
+3.4 Which of the following can be a compression function?
+Group of answer choices 4
+
+(i - 1) * N, where N is the number of elements and i is the index
+
+i * N, where N is the number of elements and i is the index
+
+i + N, where N is the number of elements and i is the index
+
+i mod N, where N is the number of elements and i is the index
+3.5 What is the expected runtime of data retrieval i.e. getitem from a hashtable? 
+Group of answer choices 2
+
+O(n^2)
+
+O(1)
+
+O(n)
+
+O(nlogn)
+3.6 What is the worst case runtime of data retrieval i.e. getitem from a hashtable? 
+
+Group of answer choices 1
+
+O(n)
+
+O(n^2)
+
+O(1)
+
+O(nlogn)
+
+7 What to do if the size of the hashtable has to be doubled?
+Group of answer choices 4
+
+Since the compression function is always the same, simply double the size without changing the keys
+
+Apply a new compression function
+
+Throw an error
+
+Use the same compression function but apply rehashing
+
+8 What is the expected runtime of data insertion i.e. setitem from a hashtable? 
+
+Group of answer choices 1
+
+O(1)
+
+O(nlogn)
+
+O(n^2)
+
+O(n)
+
+9 How to deal with a collision in a hashtable?
+Group of answer choices 2,4
+
+Increase the size of the hashtable
+
+Apply separate chaining
+
+Evict the old element with same key
+
+Apply linear probing
+
+10 What is the most appropriate way to avoid collision as much as possible?
+Group of answer choices 1
+
+Maintain a load factor less than 0.9
+
+Sort the hashtable
+
+Make the hashtable as big as possible
+
+Use a two dimensional array
+
+4.1 In a binary search tree (BST), the height of the tree is directly proportional to the number of nodes.
+Group of answer choices 2
+
+True
+
+False
+4.2 A binary tree with "n" nodes will have exactly "n-1" edges if it's a rooted tree.
+Group of answer choices 1
+
+True
+
+False
+
+4.3 What is the time complexity of deleting an element from a binary search tree with n nodes and a height of h?
+Group of answer choices 1
+
+O(h)
+
+O(1)
+
+O(n)
+
+O(nh)
+
+O(n^2)
+5 What is the maximum number of nodes at level "k" in a binary tree?
+Group of answer choices 4
+
+k
+
+2^(k-1)
+
+k^2
+
+2^k
+
+6 In a binary search tree (BST), the left subtree of a node contains only nodes with values less than the node's value.
+Group of answer choices 1
+
+True
+
+False
+
+4.7 A tree can be considered as a special case of a graph.
+Group of answer choices 1
+
+True
+
+False
+
+4.8 The height of a binary search tree (BST) can never exceed log₂(n), where "n" is the number of nodes
+Group of answer choices 2
+
+True
+
+False
+
+4.9 A binary tree is a type of hierarchical data structure.
+Group of answer choices 1
+
+True
+
+False
+
+4.10 In a binary tree, the depth of a node is equal to its level.
+Group of answer choices 1
+
+True
+
+False
+
+5.1 Which of the following is true about a max-heap?
+Group of answer choices 3
+
+The left child has a value greater than its parent, and the right child has a value smaller than its parent
+
+The left child has a value smaller than its parent, and the right child has a value greater than its parent
+
+The parent node has a value greater than its children
+
+The parent node has a value smaller than its children
+
+5.2 In a min-heap, what property is satisfied?
+Group of answer choices 1
+
+The parent node has a value smaller than its children
+
+The parent node has a value greater than its children
+
+The left child has a value greater than its parent, and the right child has a value smaller than its parent
+
+The left child has a value smaller than its parent, and the right child has a value greater than its parent
+
+5.3 What is the height of a heap with seven nodes?
+Group of answer choices 4
+
+3
+
+5
+
+4
+
+2
+
+5.4 Which operation maintains the heap property after inserting an element into a heap?
+Group of answer choices 4
+
+Bubble Sort
+
+Quick Sort
+
+Insertion Sort
+
+Heapify
+
+5.5 Which of the following is not a valid application of a heap data structure?
+Group of answer choices 2
+
+Priority Queues
+
+Binary Search Trees
+
+Dijkstra's Shortest Path Algorithm
+
+Heap Sort
+
+5.6 The time complexity of building a heap from an array of n elements is:
+Group of answer choices 2
+
+O(n^2)
+
+O(n)
+
+O(log n)
+
+O(n log n)
+
+5.7 A heap is a binary tree where each parent node has a value greater than or equal to its children in a max-heap.
+Group of answer choices 1
+
+True
+
+False
+
+5.8 A binary heap is a complete binary tree, but a complete binary tree is not necessarily a heap.
+Group of answer choices 1
+
+True
+
+False
+
+5.9 What is the best-case time complexity of heap sort?
+Group of answer choices 4
+
+O(n)
+
+O(n^2)
+
+O(log n)
+
+O(n log n)
+
+5.10 What is the height of a perfectly balanced binary heap with 15 nodes?
+Group of answer choices 4
+
+2
+
+5
+
+4
+
+3

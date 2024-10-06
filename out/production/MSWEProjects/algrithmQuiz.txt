@@ -1,0 +1,119 @@
+1.1 Which has more potential for speeding up a program?
+Group of answer choices 1
+
+Efficiency improvements to the algorithms of the program
+
+Adding more/better hardware on which to run the program
+
+1.2 Which of the following statements are true about the RAM model of computation? (Mark all that apply)
+Group of answer choices 1,4,5
+
+An if statement takes exactly one time step.
+
+A loop takes exactly one time step.
+
+The RAM model is a 100% accurate model of how real computers work.
+
+The RAM model enables us to analyze algorithms in a machine-independent way.
+
+The RAM model incorporates simplifying assumptions
+
+3. Which complexity measure is most often used?
+Group of answer choices 1
+
+Worst-case complexity
+
+Average-case complexity
+
+Best-case complexity
+
+Base-case complexity
+
+4. Suppose that an algorithm, running on an input of size n, takes 
+machine instructions.
+
+We could say that the running time of this algorithm grows as:
+
+Group of answer choices 2
+
+6300
+
+n2
+
+n
+
+40n
+
+n3
+
+5. If we want to indicate that an algorithm takes at least log n time, without providing an upper bound, which notation do we use? 
+Group of answer choices 3
+
+O(log n)
+
+Θ(log n)
+
+Ω(log n)
+
+6. Rank the below functions in order of increasing dominance (1=least dominant, 6=most dominant)
+Group of answer choices
+n^2
+
+4
+4n
+
+3
+3^n
+
+6
+0.5^n
+
+5
+log n
+
+2
+35
+
+1
+
+7. True or false: the function 
+
+n - 15
+
+and the function
+
+3 + 3n
+
+have the same worst-case complexity. true
+
+8 log n ^log 14 = log 14^log n true
+9 Logarithms arise in any process in which things are repeatedly: (mark all that apply)
+Group of answer choices 1234
+
+halved
+
+divided by 4
+
+doubled
+
+cubed
+
+summed
+
+10. The function
+
+n^2 x 4n 
+
+can be considered to have the same worst-case complexity as: (mark all that apply)
+
+Group of answer choices 1,4
+
+8n3 + 2n + 3600
+
+2n2 + 36n + 4
+
+4n
+
+6n3
+
+n2 + 4n
