@@ -3,6 +3,8 @@ import java.util.List;
 //https://www.geeksforgeeks.org/building-heap-from-array/
 //from chatgpt
 public class HeapBuilder {
+    //return heap root node
+    //The createMinHeap method takes a list of integers and rearranges it into a Min-Heap using the heapify process.
     public Node createMinHeap(List<Integer> list) {
         if (list == null || list.size() == 0) {
             return null;
@@ -14,7 +16,7 @@ public class HeapBuilder {
         }
         return buildBinaryTree(list, 0);
     }
-
+//comparing each node with its left and right children and swapping if necessary.
     private void heapifyMin(List<Integer> list, int size, int index) {
         int min = index;
         int left = index * 2 + 1;
@@ -31,8 +33,9 @@ public class HeapBuilder {
             heapifyMin(list, size, min);
         }
     }
-
-    private Node buildBinaryTree(List<Integer> list, int index) {
+// recursively builds a binary tree from the list, where the index of each node's children is calculated as 2 * index + 1 (left child) and 2 * index + 2 (right child).
+// This function converts the array-based heap into a tree-based structure.
+    public Node buildBinaryTree(List<Integer> list, int index) {
         if(index >= list.size()) {
             return null;
         }
@@ -66,7 +69,7 @@ public class HeapBuilder {
         }
         if(max != index) {
             Collections.swap(list, index, max);
-            heapifyMax(list, index, max);
+            heapifyMax(list, size, max);
         }
     }
 }
