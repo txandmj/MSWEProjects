@@ -9,8 +9,10 @@ public class Sorting {
         Map<String, List<String>> map = new HashMap<>();
         for(String s : strs) {
             char[] chars = s.toCharArray();
-            MergeSort sort = new MergeSort();
-            sort.mergeSort(chars);
+            //MergeSort sort = new MergeSort();
+            //sort.mergeSort(chars);
+            HeapSort sort = new HeapSort();
+            sort.heapSort(chars);
             String sortedKey = new String(chars);
             List<String> list = map.getOrDefault(sortedKey, new ArrayList<>());
             list.add(s);
