@@ -1,3 +1,4 @@
+// https://www.jiuzhang.com/solution/merge-sort/
 public class MergeSort {
     public void mergeSort(char[] chars) {
         int len = chars.length;
