@@ -1,4 +1,5 @@
 // https://www.jiuzhang.com/solution/merge-sort/
+// time complexity: O(NlogN), space complexity: O(N)
 public class MergeSort {
     public void mergeSort(char[] chars) {
         int len = chars.length;
