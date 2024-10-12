@@ -18,5 +18,11 @@ public class GraphTest {
         for(int population : islandsPopulation) {
             System.out.println("The island population: " + population);
         }
+
+        City cityA = cityList.get(0);
+        City cityB = cityList.get(1);
+
+        int shortestPath = arch.shortestPath(cityA, cityB);
+        System.out.println("Shortest path between " + cityA.getName() + " and " + cityB.getName() + ": " + shortestPath);
     }
 }
