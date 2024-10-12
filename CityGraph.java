@@ -16,10 +16,14 @@ public class CityGraph {
         BufferedReader br = new BufferedReader(new FileReader(populationFile));
         String line = "";
         while((line = br.readLine()) != null) {
-            String[] cityInfo = line.split(":");
+            String[] cityInfo = line.split(" : ");
             String cityName = cityInfo[0].trim();
             int population = Integer.parseInt(cityInfo[1].trim());
             City city = new City(cityName, population);
+            if(map.containsKey(cityName))
+            {
+                System.out.println(cityName);
+            }
             map.put(cityName, city);
         }
         br.close();
