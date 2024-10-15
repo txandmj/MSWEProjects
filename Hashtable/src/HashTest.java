@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class HashTest {
     public static void main(String[] args) throws IOException {
-        String path = "C:\\code\\MSWEProjects\\pride-and-prejudice.txt";
+        String path = "C:\\code\\pride-and-prejudice.txt";
         StringStoreIntoHashTable ht = new StringStoreIntoHashTable();
         BufferedReader br = null;
         try{

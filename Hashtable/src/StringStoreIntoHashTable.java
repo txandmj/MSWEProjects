@@ -6,32 +6,31 @@ public class StringStoreIntoHashTable {
     public StringStoreIntoHashTable() {
         ht = new HashTable(131);
     }
-//this method splits the input string based on common delimiters
+    // Split the str into words using a regular expression that matches non-alphanumeric characters
+    //splitDelimiters() from chatgpt
     public String[] splitDelimiters(String s) {
-        String delimiters = "[ ,.!?\n\t]";
-        String[] res = s.split(delimiters);
+        String[] res = s.split("[^a-zA-Z0-9]+");
         return res;
     }
-    //This method sorts the characters in a string, which effectively turns a word into its anagram root.
+    // Sort the characters in a string to get the anagram root
     private String sort(String s) {
-        char[] chars = s.toCharArray();
+        //handle case sensitivity,from chatgpt
+        char[] chars = s.toLowerCase().toCharArray();
         Arrays.sort(chars);
         return new String(chars);
     }
-// It iterates through the array of words, sorts each word,
-// checks if the sorted version is already in the hash table, and adds it if it's not.
+    // It iterates through the array of words, sorts each word,
+    // checks if the sorted version is already in the hash table, and adds it if it's not.
     public void add(String[] line) {
         if(line == null || line.length == 0) {
-            System.out.println("Nothing to read");
+            return;
         }
         for(String s : line) {
             if(s.length() == 0) {
                 continue;
             }
             String sortedString = sort(s);
-            if(ht.exist(sortedString)) {
-                continue;
-            } else {
+            if(!ht.exist(sortedString)) {
                 ht.insert(sortedString);
             }
         }
