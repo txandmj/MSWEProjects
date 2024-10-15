@@ -1,5 +1,6 @@
 public class StackTest {
     public static void main(String[] args) {
+        //test code for stack class
 //        Stack stack = new Stack();
 //        stack.push(10);
 //        stack.push(20);
@@ -12,7 +13,8 @@ public class StackTest {
 //        System.out.println(stack.pop());
 //        System.out.println(stack.peek());
 //        System.out.println("The size is " + stack.size());
-//
+
+        //test code for calculator
         try{
             StackCalculator sc = new StackCalculator();
 //            int res = sc.calculator("10 + 20 * 2 - 3 + 6 / 2");
