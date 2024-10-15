@@ -10,9 +10,9 @@ public class StackCalculator {
         } else if (op == '-') {
             stack.push(-num);
         } else if (op == '*') {
-            int tmp = (int)stack.pop() * num;
+            int tmp = stack.pop() * num;
             stack.push(tmp);
-        }else if (op == '/') {
+        } else if (op == '/') {
             if(num == 0) {
                 throw new ArithmeticException("Division by zero!");
             }
@@ -22,13 +22,13 @@ public class StackCalculator {
     }
     // Main calculator function to evaluate the expression
     public int calculator(String str) throws Exception {
-        if(str == null) {
+        if(str == null || str.length() == 0) {
             throw new Exception("String is empty!");
         }
         int res = 0, num = 0;
-        char operand = '+'; //+-*/
+        char operator = '+'; //default to addition for the first number
         char[] chars = str.toCharArray();
-        //To avoid multiple numbers and operands together
+        //To avoid multiple numbers and operators together
         //flagPre[0] for number, flag[1] for space
         boolean[] flagPre = {true, false};
         for(char c : chars) {
@@ -39,10 +39,11 @@ public class StackCalculator {
                 }
                 flagPre[0] = true;
                 num = num * 10 + c - '0'; // ASCII conversion to int!!!
+                flagPre[1] = false;
             } else if (ct == 2){// If it's an operator
                 if(flagPre[0]) { //previous element is a number
-                    InternalCalc(operand, num);
-                    operand = c;
+                    InternalCalc(operator, num);
+                    operator = c; //update the operator
                     num = 0;//reassign num
                     flagPre[0] = false;
                 } else { //previous element isn't a number,edge case: 10 ++ 20
@@ -54,18 +55,17 @@ public class StackCalculator {
             } else if (ct == -1) {
                 throw new Exception("String is invalid!");
             }
-
         }
         // Perform the last calculation
         if(flagPre[0] == true) { //the last element is a number
-            InternalCalc(operand, num);
+            InternalCalc(operator, num);
         } else { //the last element isn't a number. eg 10+20+
             throw new Exception("Invalid input: the last element should be a number");
         }
 
         // Pop the stack and sum up the result
         while(stack.size() > 0) {
-            res += (int)stack.pop();
+            res += stack.pop();
         }
         return res;
     }
