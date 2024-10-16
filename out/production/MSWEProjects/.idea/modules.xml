@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/MSWEProjects.iml" filepath="$PROJECT_DIR$/.idea/MSWEProjects.iml" />
-      <module fileurl="file://$PROJECT_DIR$/StackQueue/StackQueue.iml" filepath="$PROJECT_DIR$/StackQueue/StackQueue.iml" />
-      <module fileurl="file://$PROJECT_DIR$/StudentTree/StudentTree.iml" filepath="$PROJECT_DIR$/StudentTree/StudentTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MSWEProjects.iml" filepath="$PROJECT_DIR$/MSWEProjects.iml" />
     </modules>
   </component>
 </project>

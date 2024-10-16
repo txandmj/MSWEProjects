@@ -1,5 +1,8 @@
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
+
 //https://www.geeksforgeeks.org/building-heap-from-array/
 //from chatgpt
 public class HeapBuilder {
@@ -70,6 +73,27 @@ public class HeapBuilder {
         if(max != index) {
             Collections.swap(list, index, max);
             heapifyMax(list, size, max);
+        }
+    }
+//print the heap (level-order traversal)
+    public void printHeap(Node root) {
+        if(root == null) {
+            System.out.println("The heap is empty!");
+        }
+        Queue<Node> que = new LinkedList<>();
+        que.offer(root);
+        while(!que.isEmpty()) {
+            int size = que.size();
+            while(size-- > 0) {
+                Node temp = que.poll();
+                System.out.print(temp.val + " ");
+                if(temp.left != null) {
+                    que.offer(temp.left);
+                }
+                if(temp.right != null) {
+                    que.offer(temp.right);
+                }
+            }
         }
     }
 }
