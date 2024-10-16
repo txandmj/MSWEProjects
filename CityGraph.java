@@ -15,23 +15,26 @@ public class CityGraph {
     public void loadCityPopulation(String populationFile) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(populationFile));
         String line = "";
+        int count = 0;
         while((line = br.readLine()) != null) {
             String[] cityInfo = line.split(" : ");
             String cityName = cityInfo[0].trim();
             int population = Integer.parseInt(cityInfo[1].trim());
             City city = new City(cityName, population);
-            if(map.containsKey(cityName))
-            {
+            if(map.containsKey(cityName)) {
                 System.out.println(cityName);
+                count++;
             }
             map.put(cityName, city);
         }
+        System.out.println(count);
         br.close();
     }
     //test code: whether loadCityPopulation method works
     public int cityNumber() {
         return map.size();
     }
+
     public void loadRoadNetwork(String roadNetwork) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(roadNetwork));
         String line = "";
