@@ -1,3 +1,7 @@
+package StackQueue.src;
+
+import StackQueue.src.Queue;
+
 public class StackWithTwoQs {
     private Queue<Object> que1;//in-out
     private Queue<Object> que2;//temp que

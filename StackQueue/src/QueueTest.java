@@ -1,3 +1,5 @@
+package StackQueue.src;
+
 public class QueueTest {
     public static void main(String args[]) {
         Queue<Object> que = new Queue<>();

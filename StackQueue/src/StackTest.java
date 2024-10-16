@@ -1,3 +1,7 @@
+package StackQueue.src;
+
+import StackQueue.src.StackCalculator;
+
 public class StackTest {
     public static void main(String[] args) {
         //test code for stack class
@@ -20,7 +24,7 @@ public class StackTest {
 //            int res = sc.calculator("10 + 20 * 2 - 3 + 6 / 2");
 //            System.out.println(res);
             //System.out.println(sc.calculator("10+foo"));
-            //System.out.println(sc.calculator("10+++20"));
+            System.out.println(sc.calculator("10+++20"));
             //System.out.println(sc.calculator("10+20 20"));
             System.out.println(sc.calculator("10+20+"));
 
