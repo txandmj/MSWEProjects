@@ -4,6 +4,7 @@ public class Student {
     private String home = null;
     private String program = null;
     private String year = null;
+
     public Student(String studentNum, String name, String home, String program, String year) {
         this.studentNum = studentNum.trim();
         this.name = name.trim();

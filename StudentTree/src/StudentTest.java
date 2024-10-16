@@ -22,9 +22,9 @@ public class StudentTest {
             String inorderTraversalPath = "C:\\code\\MSWEProjects\\inorderTraversal.txt";
             studentTree.writeIntoFile(context, inorderTraversalPath);
             //Task-3: Traverse the binary search tree level-by-level. Print the node data to a text file
-            String contextLayer = studentTree.layersTravaersal();
-            String layerTraversalPath = "C:\\code\\MSWEProjects\\layerTraversal.txt";
-            studentTree.writeIntoFile(contextLayer, layerTraversalPath);
+            String contextLevelOrder = studentTree.levelOrderTravaersal();
+            String layerTraversalPath = "C:\\code\\MSWEProjects\\levelOrderTraversal.txt";
+            studentTree.writeIntoFile(contextLevelOrder, layerTraversalPath);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
