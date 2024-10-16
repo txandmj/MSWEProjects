@@ -1,7 +1,7 @@
 package StackQueue.src;
 
 import java.util.ArrayList;
-
+// it implements a stack by using an arraylist
 public class Stack<Object> {
     private ArrayList<Object> list = null;
     private int size = 0;
@@ -9,6 +9,7 @@ public class Stack<Object> {
     public Stack() {
         list = new ArrayList<>();
     }
+    //Adds an element (o) to the top of the stack
     //It checks if the object is null before adding it to the stack.
     public void push(Object o) {
         if(o == null) {
@@ -20,6 +21,7 @@ public class Stack<Object> {
             //System.out.println(o + " is added!");
         }
     }
+    //Removes and returns the top element of the stack
     //It checks if the stack is empty before removing and return the top element
     public Object pop() {
         if(size == 0) {
