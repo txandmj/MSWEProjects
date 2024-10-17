@@ -1,3 +1,5 @@
+package Hashtable.src;
+
 import java.util.Arrays;
 
 public class StringStoreIntoHashTable {
@@ -9,23 +11,22 @@ public class StringStoreIntoHashTable {
     // Split the str into words using a regular expression that matches non-alphanumeric characters
     //splitDelimiters() from chatgpt
     public String[] splitDelimiters(String s) {
-        String[] res = s.split("[^a-zA-Z0-9]+");
-        return res;
+        String[] splitedString = s.split("[^a-zA-Z0-9]+");
+        return splitedString;
     }
     // Sort the characters in a string to get the anagram root
     private String sort(String s) {
-        //handle case sensitivity,from chatgpt
         char[] chars = s.toLowerCase().toCharArray();
         Arrays.sort(chars);
         return new String(chars);
     }
     // It iterates through the array of words, sorts each word,
     // checks if the sorted version is already in the hash table, and adds it if it's not.
-    public void add(String[] line) {
-        if(line == null || line.length == 0) {
+    public void add(String[] splitedString) {
+        if(splitedString == null || splitedString.length == 0) {
             return;
         }
-        for(String s : line) {
+        for(String s : splitedString) {
             if(s.length() == 0) {
                 continue;
             }
