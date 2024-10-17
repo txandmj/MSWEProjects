@@ -33,7 +33,6 @@ public class StudentTest {
         }
 
     }
-
     // Read the input file and process each record. From chatgpt
     private static Student extractStudentInfo(String line) {
         String number = line.substring(1, 8).trim();
