@@ -1,3 +1,5 @@
+package StudentTree.src;
+
 import java.util.LinkedList;
 import java.util.Queue;
 import java.io.*;
@@ -36,8 +38,8 @@ public class BSTStudentTree {
         if(root == null) {
             return null;
         }
-        TreeNode node = root;
-        return deleteInternal(node, student);
+        TreeNode cur = root;
+        return deleteInternal(cur, student);
     }
     // Recursively deletes the node with the matching student.
     public TreeNode deleteInternal (TreeNode node, TreeNode student) {

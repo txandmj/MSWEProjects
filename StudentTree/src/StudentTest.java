@@ -1,8 +1,11 @@
+package StudentTree.src;
+
 import java.io.*;
 public class StudentTest {
     public static void main(String[] args) throws FileNotFoundException {
         BufferedReader br = null;
         try{
+            //Task-1: Build a Binary Search Tree (BST) using the data
             String path = ("C:\\code\\MSWEProjects\\tree-input.txt");
             br = new BufferedReader(new FileReader(path));
             BSTStudentTree studentTree = new BSTStudentTree();

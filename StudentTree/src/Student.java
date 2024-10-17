@@ -1,3 +1,5 @@
+package StudentTree.src;
+
 public class Student {
     private String studentNum = null;
     private String name = null;

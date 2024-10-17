@@ -1,3 +1,5 @@
+package StudentTree.src;
+
 public class TreeNode {
     Student student = null;
     TreeNode left = null;
