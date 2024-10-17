@@ -31,7 +31,6 @@ public class StudentTest {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
     }
     // Read the input file and process each record. From chatgpt
     private static Student extractStudentInfo(String line) {
@@ -41,6 +40,5 @@ public class StudentTest {
         String program = line.substring(37, 41).trim();
         String year = line.substring(41, 42);
         return new Student(number, lastName, home, program, year);
-
     }
 }
